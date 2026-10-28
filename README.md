@@ -38,3 +38,12 @@ npm start
 
 시연 로그인과 브라우저 localStorage를 사용합니다. 공용 DB와 실제 계정 인증은 연결되지 않았습니다.
 접수·사진·재고 등 브라우저 저장 데이터는 Git에 포함되지 않으며 다른 컴퓨터와 자동으로 공유되지 않습니다.
+
+## Netlify 배포 구조
+
+`npm run build`가 Netlify 게시 폴더 `outputs/web/`를 생성합니다.
+- `/`: `work/portal/index.html` 프로젝트 선택 화면
+- `/ichacare911/`: ONCARE 및 관련 이미지
+
+추가 프로젝트는 빌드 결과의 하위 폴더에 배치하고 메인 화면에 링크를 추가합니다.
+기존 단독 시연 파일과 `work/sites-oncare/dist/`도 계속 생성됩니다.

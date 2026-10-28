@@ -7,3 +7,9 @@ let html=fs.readFileSync(path.join(source,'index.html'),'utf8');html=html.replac
 fs.mkdirSync(path.join(source,'dist'),{recursive:true});fs.writeFileSync(path.join(source,'dist/index.html'),html);fs.writeFileSync(path.join(root,'outputs/온케어_화면시연.html'),html);console.log('Built complete latest source:',Buffer.byteLength(html),'bytes');
 
 fs.cpSync(path.join(source,'assets'),path.join(source,'dist/assets'),{recursive:true});
+
+const web=path.join(root,'outputs/web'),oncare=path.join(web,'ichacare911');
+fs.mkdirSync(oncare,{recursive:true});
+fs.writeFileSync(path.join(oncare,'index.html'),html);
+fs.cpSync(path.join(source,'assets'),path.join(oncare,'assets'),{recursive:true});
+fs.copyFileSync(path.join(root,'work/portal/index.html'),path.join(web,'index.html'));
