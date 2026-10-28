@@ -1,0 +1,16 @@
+function metricTrend(rows,asOf=new Date()){
+ const key=new Date(asOf).toLocaleDateString('sv-SE',{timeZone:'Asia/Seoul'}),end=new Date(key+'T00:00:00+09:00').getTime(),day=86400000;
+ const daily=Array(14).fill(0),labels=Array.from({length:7},(_,i)=>new Date(end-(6-i)*day).toLocaleDateString('sv-SE',{timeZone:'Asia/Seoul'}));
+ for(const r of rows){const at=new Date(r.created).getTime();if(!Number.isFinite(at))continue;const index=Math.floor((at-(end-13*day))/day);if(index>=0&&index<14)daily[index]++;}
+ const previous=daily.slice(0,7).reduce((a,b)=>a+b,0),current=daily.slice(7).reduce((a,b)=>a+b,0),direction=current===previous?'same':current>previous?'up':'down';
+ let change=previous===0?(current===0?'변동 없음':'신규 발생'):current===previous?'변동 없음':Math.abs((current-previous)/previous*100).toLocaleString('ko-KR',{maximumFractionDigits:1})+'%';
+ return {previous,current,direction,change,points:daily.slice(7),labels};
+}
+function metricSparkline(trend,id){
+ const width=116,height=48,pad=4,max=Math.max(1,...trend.points),points=trend.points.map((n,i)=>[pad+i*(width-pad*2)/6,height-pad-n/max*(height-pad*2)]),line=points.map(([x,y],i)=>(i?'L':'M')+x.toFixed(1)+' '+y.toFixed(1)).join(' '),area=line+` L${width-pad} ${height} L${pad} ${height} Z`,label=trend.labels.map((d,i)=>d.slice(5)+' '+trend.points[i]+'건').join(', ');
+ return `<svg class="metric-spark" viewBox="0 0 ${width} ${height}" role="img" aria-label="최근 7일 신규 신청 추이: ${esc(label)}"><title>${esc(label)}</title><defs><linearGradient id="metric-fill-${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="currentColor" stop-opacity=".22"/><stop offset="100%" stop-color="currentColor" stop-opacity="0"/></linearGradient></defs><path d="${area}" fill="url(#metric-fill-${id})"/><path d="${line}" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${points[6][0]}" cy="${points[6][1]}" r="2.3" fill="currentColor"/></svg>`;
+}
+function dashboardMetrics(rows){
+ const specs=[['전체 신청','list',()=>true,'조회 범위 내 전체 신청'],['접수 대기','clock',r=>r.status==='접수','담당자 확인 대기'],['처리 중','pc',r=>r.status==='처리 중','전산 담당자 처리 중'],['처리 완료','check',r=>r.status==='완료','처리 완료된 신청']];
+ return `<div class="cards trend-cards">${specs.map(([label,shape,predicate,note],i)=>{const subset=rows.filter(predicate),t=metricTrend(subset),arrow=t.direction==='up'?'▲':t.direction==='down'?'▼':'—';return `<article class="metric trend-card metric-tone-${i}"><div class="trend-card-head"><span class="metric-icon">${icon(shape)}</span><div><div class="metriclabel">${label}</div><small class="metric-total-label">누적 건수</small></div></div><div class="metricvalue">${subset.length.toLocaleString('ko-KR')}<small>건</small></div><div class="trend-card-bottom"><div class="metric-change ${t.direction}" title="최근 7일 신청 ${t.current}건 / 이전 7일 신청 ${t.previous}건 · 현재 상태 기준"><strong>${arrow} ${t.change}</strong><small>이전 7일 대비</small></div>${metricSparkline(t,i)}</div><div class="metric-period">최근 7일 <b>${t.current}건</b><span>이전 7일 ${t.previous}건</span></div><div class="metricfoot">${note}</div></article>`;}).join('')}</div><p class="metric-method">큰 숫자는 누적 건수 · 증감률·그래프는 한국시간 기준 최근 7일(오늘 포함)의 신규 신청 추이입니다. 상태별 카드는 현재 상태로 분류하며 과거 대기·처리 건수의 변화와는 다릅니다.</p>`;
+}

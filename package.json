@@ -1,0 +1,11 @@
+{
+  "name": "oncare",
+  "version": "0.23.0",
+  "private": true,
+  "scripts": {
+    "build": "node work/resume-tools/build.cjs .",
+    "start": "npm run build && node outputs/hospital-helpdesk/server.cjs",
+    "test": "node work/check-today-demo.cjs"
+  },
+  "engines": { "node": ">=18" }
+}

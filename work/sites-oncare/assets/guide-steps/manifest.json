@@ -1,0 +1,182 @@
+[
+  {
+    "guide": "g1",
+    "title": "전원이 켜지지 않아요",
+    "step": 1,
+    "text": "전원 케이블과 멀티탭 연결 상태를 확인해주세요. 멀티탭의 전원 표시등이 켜져 있나요?",
+    "file": "g1-step1.svg",
+    "kind": "pc-power",
+    "caption": "전원 케이블 · 멀티탭 확인",
+    "origin": "Code-generated instructional SVG; no external images"
+  },
+  {
+    "guide": "g1",
+    "title": "전원이 켜지지 않아요",
+    "step": 2,
+    "text": "연결 상태를 확인한 뒤 PC 전원 버튼을 한 번 눌러주세요. 전원 표시등이나 팬의 작동 여부를 확인해주세요.",
+    "file": "g1-step2.svg",
+    "kind": "pc-button",
+    "caption": "전원 버튼과 작동 표시 확인",
+    "origin": "Code-generated instructional SVG; no external images"
+  },
+  {
+    "guide": "g2",
+    "title": "컴퓨터가 느리거나 멈춰요",
+    "step": 1,
+    "text": "진행 중인 작업을 저장하고 사용하지 않는 프로그램을 닫아주세요. 응답하지 않는 프로그램이 있는지 확인해주세요.",
+    "file": "g2-step1.svg",
+    "kind": "pc-apps",
+    "caption": "작업 저장 후 미사용 프로그램 종료",
+    "origin": "Code-generated instructional SVG; no external images"
+  },
+  {
+    "guide": "g2",
+    "title": "컴퓨터가 느리거나 멈춰요",
+    "step": 2,
+    "text": "진료 업무에 영향이 없는지 먼저 확인해주세요. 저장하지 않은 작업이 사라질 수 있습니다. 재시작이 가능한 경우 PC를 다시 시작해주세요.",
+    "file": "g2-step2.svg",
+    "kind": "pc-restart",
+    "caption": "업무 영향 확인 후 재시작",
+    "origin": "Code-generated instructional SVG; no external images"
+  },
+  {
+    "guide": "g3",
+    "title": "키보드·마우스가 작동하지 않아요",
+    "step": 1,
+    "text": "키보드·마우스의 연결 상태를 확인해주세요. 무선 제품은 배터리와 전원 상태도 확인해주세요.",
+    "file": "g3-step1.svg",
+    "kind": "input-power",
+    "caption": "키보드 · 마우스 연결과 배터리",
+    "origin": "Code-generated instructional SVG; no external images"
+  },
+  {
+    "guide": "g3",
+    "title": "키보드·마우스가 작동하지 않아요",
+    "step": 2,
+    "text": "진행 중인 작업에 영향이 없는지 확인한 후 USB 연결을 다시 연결해주세요.",
+    "file": "g3-step2.svg",
+    "kind": "usb-reconnect",
+    "caption": "USB 연결을 다시 확인",
+    "origin": "Code-generated instructional SVG; no external images"
+  },
+  {
+    "guide": "g4",
+    "title": "화면에 신호 없음이 표시돼요",
+    "step": 1,
+    "text": "PC와 모니터 전원이 모두 켜져 있는지 확인해주세요. 모니터 전원 표시등을 확인해주세요.",
+    "file": "g4-step1.svg",
+    "kind": "display-power",
+    "caption": "PC와 모니터 전원 확인",
+    "origin": "Code-generated instructional SVG; no external images"
+  },
+  {
+    "guide": "g4",
+    "title": "화면에 신호 없음이 표시돼요",
+    "step": 2,
+    "text": "모니터의 영상 케이블 연결 상태와 입력 소스(HDMI·DP 등)가 연결된 단자와 같은지 확인해주세요.",
+    "file": "g4-step2.svg",
+    "kind": "display-input",
+    "caption": "영상 케이블과 입력 소스 일치",
+    "origin": "Code-generated instructional SVG; no external images"
+  },
+  {
+    "guide": "g5",
+    "title": "화면이 깜빡이거나 색상이 이상해요",
+    "step": 1,
+    "text": "모니터 영상 케이블이 느슨하게 연결되어 있지 않은지 확인해주세요.",
+    "file": "g5-step1.svg",
+    "kind": "display-cable",
+    "caption": "모니터 케이블 연결 상태 확인",
+    "origin": "Code-generated instructional SVG; no external images"
+  },
+  {
+    "guide": "g5",
+    "title": "화면이 깜빡이거나 색상이 이상해요",
+    "step": 2,
+    "text": "모니터 메뉴에서도 같은 증상이 발생하는지 확인해주세요. 반복되면 전산 지원이 필요합니다.",
+    "file": "g5-step2.svg",
+    "kind": "display-menu",
+    "caption": "모니터 자체 메뉴에서도 확인",
+    "origin": "Code-generated instructional SVG; no external images"
+  },
+  {
+    "guide": "g6",
+    "title": "프린터 출력이 안 돼요",
+    "step": 1,
+    "text": "프린터 전원과 화면의 오류 메시지를 확인해주세요. 용지와 토너 상태도 확인해주세요.",
+    "file": "g6-step1.svg",
+    "kind": "printer-status",
+    "caption": "프린터 오류 · 용지 · 토너 확인",
+    "origin": "Code-generated instructional SVG; no external images"
+  },
+  {
+    "guide": "g6",
+    "title": "프린터 출력이 안 돼요",
+    "step": 2,
+    "text": "출력 화면에서 선택한 프린터가 실제 사용할 장비인지 확인해주세요. 오프라인 또는 오류 문구가 표시되면 기록해주세요.",
+    "file": "g6-step2.svg",
+    "kind": "printer-select",
+    "caption": "출력 대상 프린터 확인",
+    "origin": "Code-generated instructional SVG; no external images"
+  },
+  {
+    "guide": "g7",
+    "title": "용지가 걸렸어요",
+    "step": 1,
+    "text": "프린터 화면에 표시된 용지 걸림 위치와 해당 장비의 사용자 안내를 확인해주세요.",
+    "file": "g7-step1.svg",
+    "kind": "paperjam-location",
+    "caption": "용지 걸림 위치부터 확인",
+    "origin": "Code-generated instructional SVG; no external images"
+  },
+  {
+    "guide": "g7",
+    "title": "용지가 걸렸어요",
+    "step": 2,
+    "text": "사용자에게 허용된 덮개만 열고 안내에 따라 보이는 용지를 조심히 제거해주세요. 뜨거운 부품을 만지거나 용지를 강하게 잡아당기지 마세요. 어려우면 조치를 중단해주세요.",
+    "file": "g7-step2.svg",
+    "kind": "paperjam-remove",
+    "caption": "허용된 덮개에서 조심히 제거",
+    "origin": "Code-generated instructional SVG; no external images"
+  },
+  {
+    "guide": "g8",
+    "title": "라벨이 나오지 않아요",
+    "step": 1,
+    "text": "프린터 전원과 오류 표시를 확인해주세요. 라벨 용지 및 리본 잔량과 장착 상태를 확인해주세요.",
+    "file": "g8-step1.svg",
+    "kind": "label-supply",
+    "caption": "라벨 용지 · 리본 상태 확인",
+    "origin": "Code-generated instructional SVG; no external images"
+  },
+  {
+    "guide": "g8",
+    "title": "라벨이 나오지 않아요",
+    "step": 2,
+    "text": "선택한 출력 장비가 맞는지 확인해주세요. 환자정보가 들어간 시험 출력을 반복하지 마세요.",
+    "file": "g8-step2.svg",
+    "kind": "label-target",
+    "caption": "라벨 출력 대상 확인",
+    "origin": "Code-generated instructional SVG; no external images"
+  },
+  {
+    "guide": "g9",
+    "title": "라벨 위치가 어긋나요",
+    "step": 1,
+    "text": "라벨 규격이 기존에 사용하던 규격과 같은지, 용지가 비뚤게 장착되지 않았는지 확인해주세요.",
+    "file": "g9-step1.svg",
+    "kind": "label-align",
+    "caption": "라벨 규격과 장착 방향 확인",
+    "origin": "Code-generated instructional SVG; no external images"
+  },
+  {
+    "guide": "g9",
+    "title": "라벨 위치가 어긋나요",
+    "step": 2,
+    "text": "출력 위치 또는 바코드에 문제가 있는 라벨은 사용을 중단해주세요. 정상 출력·인식 확인 전 임상 업무에 사용하지 마세요.",
+    "file": "g9-step2.svg",
+    "kind": "label-stop",
+    "caption": "문제 있는 라벨은 사용 중단",
+    "origin": "Code-generated instructional SVG; no external images"
+  }
+]

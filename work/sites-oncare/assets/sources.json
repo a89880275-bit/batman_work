@@ -1,0 +1,34 @@
+{
+  "DB400TFA": {
+    "image": "https://sinsungcns.com/data/_custom/cus_bbs/_mig/not_specified/2023051194123532568869.jpg",
+    "page": "https://www.sinsungcns.com/goods/view?no=2760",
+    "credit": "신성씨앤에스",
+    "local": "DB400TFA.jpg"
+  },
+  "DB400TEA": {
+    "image": "https://www.sinsungcns.com/data/_custom/cus_bbs/_mig/not_specified/2022083113710862086855.jpg",
+    "page": "https://www.sinsungcns.com/goods/view?no=2494",
+    "credit": "신성씨앤에스",
+    "local": "DB400TEA.jpg"
+  },
+  "DB400T9B": {
+    "image": "https://images.samsung.com/is/image/samsung/sec-desktop-db400t9b-z381d-db400t9b-z381d-frontblack-249678183?$450_N_PNG$=",
+    "page": "https://www.samsung.com/sec/support/model/DB400T9B-Z381D/",
+    "credit": "삼성전자",
+    "local": "DB400T9B.png"
+  },
+  "DB400S6B": {
+    "image": "https://img.danawa.com/prod_img/500000/333/464/img/5464333_1.jpg?_v=20180614063009&shrink=360%3A360",
+    "page": "https://prod.danawa.com/info/?pcode=5464333",
+    "credit": "다나와 · DB400S6B-BIZ1",
+    "local": "DB400S6B.jpg"
+  },
+  "DB400S9B": {
+    "page": "https://images.samsung.com/is/content/samsung/p5/sec/business/insights/catalog-download/2020/GB20200701_business.pdf",
+    "pdfPage": 8,
+    "imageObject": "Im25",
+    "credit": "삼성전자 카탈로그 · DB400S9B",
+    "local": "DB400S9B.jpg",
+    "note": "PDF 원본 내장 이미지 추출. 모니터·키보드 포함 대표 구성."
+  }
+}

@@ -1,0 +1,16 @@
+# Local backups and generated deployment files
+/BACKUP_MANIFEST.json
+/ONCARE_backup_*.md
+/outputs/*
+!/outputs/hospital-helpdesk/
+/outputs/hospital-helpdesk/*
+!/outputs/hospital-helpdesk/server.cjs
+/work/sites-oncare/dist/
+**/.openai/
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
